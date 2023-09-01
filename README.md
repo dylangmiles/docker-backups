@@ -6,7 +6,7 @@ Schedule file and database backups as well as periodic cleanup of backups files.
 
 1. Clone this repository to your server with files that need to be backed up
 ```
-git clone git@github.com:dylangmiles/docker-backups.git
+git clone https://github.com/dylangmiles/docker-backups.git
 ```
 
 2. Create a `.env` file in the directory with the following settings:
