@@ -1,9 +1,9 @@
 [submodule "src/file-delete"]
 	path = src/file-delete
-	url = git@github.com:dylangmiles/docker-file-delete.git
+	url = https://github.com:dylangmiles/docker-file-delete.git
 [submodule "src/file-backup"]
 	path = src/file-backup
-	url = git@github.com:dylangmiles/docker-file-backup.git
+	url = https://github.com:dylangmiles/docker-file-backup.git
 [submodule "src/mariadb-backup"]
 	path = src/mariadb-backup
-	url = git@github.com:dylangmiles/docker-mariadb-backup.git
+	url = https://github.com:dylangmiles/docker-mariadb-backup.git
