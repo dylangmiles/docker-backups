@@ -9,22 +9,7 @@ services:
       - $SOURCE:/var/source
     ports:
       - 127.0.0.1:18080:18080
-    environment:
-      - SCHEDULE
-      - NAME
-      - LOCATION
-      - LOCAL_DESTINATION
-      - AWS_ACCESS_KEY
-      - AWS_SECRET_KEY
-      - AWS_REGION
-      - AWS_DESTINATION
-      - MAIL_TO
-      - SMTP_FROM
-      - SMTP_SERVER
-      - SMTP_HOSTNAME
-      - SMTP_USERNAME
-      - SMTP_PASSWORD
-  
+    env_file: .env
   db-backup:
     build:
       context: ./src/mariadb-backup
@@ -33,25 +18,7 @@ services:
       - $LOCAL_DESTINATION:/var/destination
     ports:
       - 127.0.0.1:18081:18080
-    environment:
-      - SCHEDULE
-      - NAME
-      - LOCATION
-      - MYSQL_USER
-      - MYSQL_PASSWORD
-      - MYSQL_HOST
-      - MYSQL_PORT
-      - LOCAL_DESTINATION
-      - AWS_ACCESS_KEY
-      - AWS_SECRET_KEY
-      - AWS_REGION
-      - AWS_DESTINATION
-      - MAIL_TO
-      - SMTP_FROM
-      - SMTP_SERVER
-      - SMTP_HOSTNAME
-      - SMTP_USERNAME
-      - SMTP_PASSWORD
+    env_file: .env
   file-delete:
     build:
       context: ./src/file-delete
@@ -60,20 +27,4 @@ services:
       - $LOCAL_DESTINATION:/var/destination
     ports:
       - 127.0.0.1:18082:18080
-    environment:
-      - SCHEDULE
-      - INCLUDE_PATTERN
-      - EXCLUDE_PATTERN
-      - LOCATION
-      - LOCAL_COMMAND
-      - AWS_DRYRUN
-      - AWS_ACCESS_KEY
-      - AWS_SECRET_KEY
-      - AWS_REGION
-      - AWS_DESTINATION
-      - MAIL_TO
-      - SMTP_FROM
-      - SMTP_SERVER
-      - SMTP_HOSTNAME
-      - SMTP_USERNAME
-      - SMTP_PASSWORD
+    env_file: .env
