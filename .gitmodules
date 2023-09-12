@@ -7,3 +7,6 @@
 [submodule "src/mariadb-backup"]
 	path = src/mariadb-backup
 	url = https://github.com/dylangmiles/docker-mariadb-backup.git
+[submodule "src/pg-backup"]
+	path = src/pg-backup
+	url = https://github.com/dylangmiles/docker-pg-backup.git

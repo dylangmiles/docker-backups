@@ -12,7 +12,7 @@ services:
     env_file: .env
   db-backup:
     build:
-      context: ./src/mariadb-backup
+      context: ./src/${DB}-backup
       dockerfile: Dockerfile
     volumes:
       - $LOCAL_DESTINATION:/var/destination
