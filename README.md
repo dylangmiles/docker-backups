@@ -60,6 +60,10 @@ AWS_SECRET_KEY=******************************
 AWS_REGION=eu-west-1
 AWS_DESTINATION=s3://bucketname/path
 
+# AZURE dry run remove. 0 - false | 1 - true (default)
+AZURE_DRYRUN=1
+
+
 # Azure Storage
 AZURE_APP_TENANT_ID=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
 AZURE_APP_ID=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeef
